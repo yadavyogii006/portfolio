@@ -112,7 +112,7 @@
   h1 span { color: var(--accent); }
 
   .subtitle {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     font-family: 'DM Mono', monospace;
     font-size: 0.85rem;
     color: var(--muted);
@@ -120,11 +120,16 @@
     line-height: 1.7;
   }
 
+  .header-education {
+    margin-top: 0;
+  }
+
   .contact-links {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem 1.25rem;
-    margin-top: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .contact-links a {
@@ -521,28 +526,28 @@
   function renderProfile(profile) {
     document.title = profile.pageTitle;
     uiLabels = profile.labels;
+    const edu = profile.education;
 
     document.getElementById('header-left').innerHTML = `
       <div class="header-tag">${escapeHtml(profile.tag)}</div>
       <h1>${escapeHtml(profile.name.first)}<br/><span>${escapeHtml(profile.name.last)}</span></h1>
-      <p class="subtitle">${escapeHtml(profile.about)}</p>
       <div class="contact-links">
         ${profile.contact.map(link => {
           const external = link.url.startsWith('http');
           return `<a href="${escapeHtml(link.url)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escapeHtml(link.label)}</a>`;
         }).join('')}
       </div>
-    `;
-
-    const edu = profile.education;
-    document.getElementById('header-right').innerHTML = `
-      <div class="info-block">
+      <div class="info-block header-education">
         <h3>${escapeHtml(profile.sections.education)}</h3>
         <p>
           <span class="highlight">${escapeHtml(edu.institution)}</span> — ${escapeHtml(edu.degree)}<br/>
           ${escapeHtml(edu.duration)} · CGPA: ${escapeHtml(edu.cgpa)}
         </p>
       </div>
+      <p class="subtitle">${escapeHtml(profile.about)}</p>
+    `;
+
+    document.getElementById('header-right').innerHTML = `
       <div class="info-block">
         <h3>${escapeHtml(profile.sections.skills)}</h3>
         <div id="skills-list"></div>
