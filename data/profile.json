@@ -5,7 +5,7 @@
     "first": "Yogesh",
     "last": "Yadav"
   },
-  "about": "AI/ML and Backend Engineer with 2+ years of experience designing and shipping LLM-powered backend systems, semantic data pipelines, and AI-native platforms. I build production workflows spanning MCP tool integration, RAG pipelines, agentic orchestration with LangGraph, and reliable multi-step interactions backed by FastAPI, Redis, and vector storage. Strong foundation in data structures, databases, and backend engineering with hands-on work across PostgreSQL, MongoDB, FAISS, and Supabase. Currently at Rezolve AI building e-commerce LLM workflows for product discovery, comparison, and checkout; previously developed MediBot, HR resume-matching automation, and full-stack AI products end to end. Passionate about turning natural language into structured, reliable actions on complex real-world data.",
+  "about": "AI/ML and Backend Engineer with 2+ years of experience designing and shipping LLM-powered backend systems, semantic data pipelines, and AI-native platforms. I build production workflows spanning MCP tool integration, RAG pipelines, agentic orchestration with LangGraph, and reliable multi-step interactions backed by FastAPI, Redis, and vector storage. Strong foundation in data structures, databases, and backend engineering with hands-on work across PostgreSQL, MongoDB, FAISS, and Supabase. Passionate about turning natural language into structured, reliable actions on complex real-world data.",
   "contact": [
     {
       "label": "yogesh.y1609@gmail.com",
