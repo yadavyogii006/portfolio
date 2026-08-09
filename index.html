@@ -55,6 +55,30 @@
     overflow: hidden;
   }
 
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 900px) {
+    .header-grid { grid-template-columns: 1fr; }
+  }
+
+  .header-left {
+    animation: fadeSlideUp 0.6s ease both;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeSlideUp 0.6s 0.15s ease both;
+  }
+
   header::after {
     content: 'AI';
     position: absolute;
@@ -121,20 +145,11 @@
 
   .contact-links a:hover { color: var(--accent); }
 
-  .info-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding: 1.5rem;
+  .info-block {
+    padding: 1.25rem;
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
-    animation: fadeSlideUp 0.6s 0.3s ease both;
-  }
-
-  @media (max-width: 700px) {
-    .info-bar { grid-template-columns: 1fr; }
   }
 
   .info-block h3 {
@@ -158,6 +173,23 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+  }
+
+  .skill-group {
+    margin-bottom: 0.85rem;
+  }
+
+  .skill-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .skill-category {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 0.4rem;
   }
 
   .skill-tag {
@@ -502,42 +534,31 @@
 
   <!-- HEADER -->
   <header>
-    <div class="header-tag">Available for work</div>
-    <h1>Yogesh<br/><span>Yadav</span></h1>
-    <p class="subtitle">AI/ML and Backend Engineer with 2+ years of experience building LLM-powered backend systems, semantic data pipelines, and AI-driven platforms. Passionate about building AI-native products that enable natural language interaction with complex data.</p>
-    <div class="contact-links">
-      <a href="mailto:yogesh.y1609@gmail.com">yogesh.y1609@gmail.com</a>
-      <a href="tel:+918769127331">+91-8769127331</a>
-      <a href="https://linkedin.com/in/yogii006" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/yogii006" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-  </header>
+    <div class="header-grid">
+      <div class="header-left">
+        <div class="header-tag">Available for work</div>
+        <h1>Yogesh<br/><span>Yadav</span></h1>
+        <p class="subtitle">AI/ML and Backend Engineer with 2+ years of experience building LLM-powered backend systems, semantic data pipelines, and AI-driven platforms. Passionate about building AI-native products that enable natural language interaction with complex data.</p>
+        <div class="contact-links">
+          <a href="mailto:yogesh.y1609@gmail.com">yogesh.y1609@gmail.com</a>
+          <a href="tel:+918769127331">+91-8769127331</a>
+          <a href="https://linkedin.com/in/yogii006" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/yogii006" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
 
-  <div class="info-bar">
-    <div class="info-block">
-      <h3>Education</h3>
-      <p><span class="highlight">IIIT Una</span> — B.Tech in Computer Science & Engineering<br/>2021 – 2025 · CGPA: 7.71</p>
-    </div>
-    <div class="info-block">
-      <h3>Skills</h3>
-      <div class="skills-grid">
-        <span class="skill-tag">Generative AI</span>
-        <span class="skill-tag">RAG</span>
-        <span class="skill-tag">LangGraph</span>
-        <span class="skill-tag">MCP</span>
-        <span class="skill-tag">FastAPI</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">Redis</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">LangChain</span>
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">FAISS</span>
-        <span class="skill-tag">Supabase</span>
-        <span class="skill-tag">Docker</span>
+      <div class="header-right">
+        <div class="info-block">
+          <h3>Education</h3>
+          <p><span class="highlight">IIIT Una</span> — B.Tech in Computer Science & Engineering<br/>2021 – 2025 · CGPA: 7.71</p>
+        </div>
+        <div class="info-block">
+          <h3>Skills</h3>
+          <div id="skills-list"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </header>
 
   <!-- MAIN LAYOUT -->
   <div class="layout">
@@ -631,20 +652,36 @@
     `).join('');
   }
 
+  function renderSkills(skillGroups) {
+    const container = document.getElementById('skills-list');
+    container.innerHTML = skillGroups.map(group => `
+      <div class="skill-group">
+        <p class="skill-category">${escapeHtml(group.category)}</p>
+        <div class="skills-grid">
+          ${group.skills.map(skill => `<span class="skill-tag">${escapeHtml(skill)}</span>`).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
   async function loadPortfolio() {
     try {
-      const [experiences, projects] = await Promise.all([
+      const [experiences, projects, skills] = await Promise.all([
         fetch('data/experience.json').then(r => r.json()),
-        fetch('data/projects.json').then(r => r.json())
+        fetch('data/projects.json').then(r => r.json()),
+        fetch('data/skills.json').then(r => r.json())
       ]);
       renderExperience(experiences);
       renderProjects(projects);
+      renderSkills(skills);
     } catch (err) {
       console.error('Failed to load portfolio data:', err);
       document.getElementById('experience-list').innerHTML =
         '<p style="color:#888;font-size:0.8rem;">Could not load experience data. Serve this site over HTTP (e.g. <code>python -m http.server</code>).</p>';
       document.getElementById('projects-grid').innerHTML =
         '<p style="color:#888;font-size:0.8rem;">Could not load projects data.</p>';
+      document.getElementById('skills-list').innerHTML =
+        '<p style="color:#888;font-size:0.8rem;">Could not load skills data.</p>';
     }
   }
 

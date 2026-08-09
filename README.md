@@ -9,7 +9,8 @@ portfolio/
 ├── index.html          # Main page (loads data via JavaScript)
 ├── data/
 │   ├── experience.json # Work history
-│   └── projects.json   # Projects with links and demo videos
+│   ├── projects.json   # Projects with links and demo videos
+│   └── skills.json     # Skills by category
 ```
 
 ## Local development
@@ -29,6 +30,7 @@ Edit the JSON files in `data/` — no build step required:
 
 - **Experience:** `data/experience.json`
 - **Projects:** `data/projects.json`
+- **Skills:** `data/skills.json`
 
 Each project supports `title`, `description`, `tech`, `liveUrl`, `githubUrl`, and `demoVideo` (YouTube embed URL).
 

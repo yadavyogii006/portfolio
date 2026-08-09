@@ -1,0 +1,65 @@
+[
+  {
+    "category": "Domains",
+    "skills": [
+      "Generative AI",
+      "LLM Applications",
+      "RAG",
+      "AI Agents",
+      "MCP",
+      "LangGraph",
+      "Backend AI Systems",
+      "NLP",
+      "Computer Vision",
+      "Machine Learning",
+      "Prompt Engineering",
+      "Vector Databases"
+    ]
+  },
+  {
+    "category": "Programming",
+    "skills": [
+      "Python",
+      "C/C++",
+      "JavaScript",
+      "Bash",
+      "HTML/CSS",
+      "SQL"
+    ]
+  },
+  {
+    "category": "Frameworks & Tools",
+    "skills": [
+      "FastAPI",
+      "Django",
+      "LangChain",
+      "Google ADK",
+      "React",
+      "Streamlit",
+      "Hugging Face",
+      "OpenAI API",
+      "Azure OpenAI",
+      "Scikit-learn",
+      "Pandas",
+      "n8n",
+      "Langfuse",
+      "Docker",
+      "Git"
+    ]
+  },
+  {
+    "category": "Databases & Infra",
+    "skills": [
+      "MongoDB",
+      "Redis",
+      "PostgreSQL",
+      "MySQL",
+      "FAISS",
+      "Supabase",
+      "Elasticsearch",
+      "JWT",
+      "Postman",
+      "Webhooks"
+    ]
+  }
+]
