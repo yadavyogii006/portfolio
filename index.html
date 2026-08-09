@@ -446,114 +446,13 @@
     <!-- LEFT: EXPERIENCE -->
     <div>
       <p class="section-title">Experience</p>
-
-      <div class="exp-card">
-        <div class="exp-role">AI Engineer</div>
-        <div class="exp-company">Rezolve AI</div>
-        <div class="exp-meta">Sep 2025 – Present · Remote</div>
-        <ul class="exp-points">
-          <li>Designed and implemented LangChain-based LLM tools enabling structured actions from natural language queries.</li>
-          <li>Integrated LLM tools with FastAPI services and Redis-backed session state for reliable data handling.</li>
-          <li>Worked closely with backend teams to debug state inconsistencies and harden production workflows.</li>
-        </ul>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-role">AI Engineer Intern</div>
-        <div class="exp-company">ShortHills AI</div>
-        <div class="exp-meta">Feb 2025 – Aug 2025 · Gurgaon</div>
-        <ul class="exp-points">
-          <li>Built an AI-powered resume matching system using MongoDB, n8n, and Azure OpenAI.</li>
-          <li>Improved HR screening efficiency by 7.5× and reduced candidate selection time by 65%.</li>
-          <li>Developed MediBot using RAG pipelines, achieving a 72.5% performance score with 20% latency reduction.</li>
-        </ul>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-role">Data Science & Backend Intern</div>
-        <div class="exp-company">Gakudo AI</div>
-        <div class="exp-meta">Dec 2023 – Jul 2024 · Remote</div>
-        <ul class="exp-points">
-          <li>Developed a career guidance chatbot for K12 students using LLaMA, improving answer relevance by 40%.</li>
-          <li>Built FastAPI backends with MongoDB, handling 5,000+ requests/day.</li>
-          <li>Created automated ETL pipelines, reducing manual data processing effort by 80%.</li>
-        </ul>
-      </div>
+      <div id="experience-list"></div>
     </div>
 
     <!-- RIGHT: PROJECTS -->
     <div>
       <p class="section-title">Projects</p>
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-title">DevMate – AI Productivity Platform</div>
-          <p class="project-desc">AI-powered productivity platform that enables natural voice-to-voice interaction with multiple tools, agentic workflows, web search, YouTube summarization, stock prices, currency conversion, and document-based Q&A.</p>
-          <div class="project-tech">
-            <span class="tech-tag">FastAPI</span><span class="tech-tag">React</span><span class="tech-tag">LangGraph</span><span class="tech-tag">OpenAI</span><span class="tech-tag">Supabase</span>
-          </div>
-          <div class="video-wrap" onclick="playVideo(this, '-XHQFR3IEG8')">
-            <div class="video-thumb"><img src="https://img.youtube.com/vi/-XHQFR3IEG8/mqdefault.jpg" alt="DevMate Demo"/></div>
-            <div class="video-play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="10" fill="rgba(0,0,0,0.72)"/><polygon points="26,14 26,34 46,24" fill="#fff"/></svg></div>
-          </div>
-          <div class="project-btns">
-            <a class="btn btn-dark" href="https://devmate-monolith.onrender.com/" target="_blank">🚀 Live</a>
-            <a class="btn btn-outline" href="https://github.com/yogii006/devmate" target="_blank">💻 GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-title">Mailcruit – AI Email Generator</div>
-          <p class="project-desc">Browser extension that generates personalized job application emails from copied job descriptions using OpenAI or Gemini APIs, drafting emails directly in Gmail.</p>
-          <div class="project-tech">
-            <span class="tech-tag">JavaScript</span><span class="tech-tag">Chrome Ext</span><span class="tech-tag">OpenAI</span><span class="tech-tag">Gemini</span>
-          </div>
-          <div class="video-wrap" onclick="playVideo(this, '6m_uLKglF9k')">
-            <div class="video-thumb"><img src="https://img.youtube.com/vi/6m_uLKglF9k/mqdefault.jpg" alt="Mailcruit Demo"/></div>
-            <div class="video-play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="10" fill="rgba(0,0,0,0.72)"/><polygon points="26,14 26,34 46,24" fill="#fff"/></svg></div>
-          </div>
-          <div class="project-btns">
-            <a class="btn btn-dark" href="chrome-extension://djgdjekapnegnbiobjpfppocdphamkfc/options.html" target="_blank">🚀 Live</a>
-            <a class="btn btn-outline" href="https://github.com/yogii006/job-extension" target="_blank">💻 GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-title">YouTube Upload Automation Pipeline</div>
-          <p class="project-desc">Automated YouTube video upload system using ChatGPT to generate SEO-optimized titles, descriptions, and tags, publishing via YouTube Data API with Google Sheets logging.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">N8N</span><span class="tech-tag">ChatGPT</span><span class="tech-tag">Railway</span>
-          </div>
-          <div class="video-wrap" onclick="playVideo(this, 'JH9HsGrQJAs')">
-            <div class="video-thumb"><img src="https://img.youtube.com/vi/JH9HsGrQJAs/mqdefault.jpg" alt="YouTube Automation Demo"/></div>
-            <div class="video-play"><svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="10" fill="rgba(0,0,0,0.72)"/><polygon points="26,14 26,34 46,24" fill="#fff"/></svg></div>
-          </div>
-          <div class="project-btns">
-            <a class="btn btn-dark" href="https://n8n-u7b1.onrender.com/" target="_blank">🚀 Live</a>
-            <a class="btn btn-outline" href="https://github.com/yogii006/your-repo-name" target="_blank">💻 GitHub</a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-title">Face Recognition Attendance System</div>
-          <p class="project-desc">Computer vision-based attendance system with real-time face detection and recognition to automate attendance tracking, preventing proxy attendance with high accuracy.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span><span class="tech-tag">Face Recog</span>
-          </div>
-          <a class="video-wrap" href="https://github.com/yogii006/face-recognition-attendance" target="_blank" style="background:#1a1a1a; display:flex; align-items:center; justify-content:center;">
-            <div style="text-align:center; color:#555; font-family:'DM Mono',monospace; font-size:0.7rem;">No demo video yet</div>
-          </a>
-          <div class="project-btns">
-            <a class="btn btn-dark" href="https://your-attendance-live-link.com" target="_blank">🚀 Live</a>
-            <a class="btn btn-outline" href="https://github.com/yogii006/face-recognition-attendance" target="_blank">💻 GitHub</a>
-          </div>
-        </div>
-
-      </div>
+      <div id="projects-grid" class="projects-grid"></div>
     </div>
 
   </div>
@@ -566,11 +465,91 @@
 
 </div>
 <script>
+  const PLAY_ICON = '<svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="10" fill="rgba(0,0,0,0.72)"/><polygon points="26,14 26,34 46,24" fill="#fff"/></svg>';
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function extractYouTubeId(url) {
+    if (!url) return null;
+    const match = url.match(/(?:embed\/|v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : null;
+  }
+
   function playVideo(el, videoId) {
     el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     el.style.cursor = 'default';
     el.onclick = null;
   }
+
+  function renderExperience(experiences) {
+    const container = document.getElementById('experience-list');
+    container.innerHTML = experiences.map((exp, i) => `
+      <div class="exp-card" style="animation-delay: ${0.1 + i * 0.1}s">
+        <div class="exp-role">${escapeHtml(exp.role)}</div>
+        <div class="exp-company">${escapeHtml(exp.company)}</div>
+        <div class="exp-meta">${escapeHtml(exp.duration)} · ${escapeHtml(exp.location)}</div>
+        <ul class="exp-points">
+          ${exp.points.map(point => `<li>${escapeHtml(point)}</li>`).join('')}
+        </ul>
+      </div>
+    `).join('');
+  }
+
+  function renderVideoSection(project) {
+    const videoId = extractYouTubeId(project.demoVideo);
+    if (!videoId) {
+      return `<div class="video-wrap" style="background:#1a1a1a; display:flex; align-items:center; justify-content:center; cursor:default;">
+        <div style="text-align:center; color:#555; font-family:'DM Mono',monospace; font-size:0.7rem;">No demo video</div>
+      </div>`;
+    }
+    return `<div class="video-wrap" onclick="playVideo(this, '${videoId}')">
+      <div class="video-thumb"><img src="https://img.youtube.com/vi/${videoId}/mqdefault.jpg" alt="${escapeHtml(project.title)} Demo"/></div>
+      <div class="video-play">${PLAY_ICON}</div>
+    </div>`;
+  }
+
+  function renderProjects(projects) {
+    const container = document.getElementById('projects-grid');
+    container.innerHTML = projects.map((project, i) => `
+      <div class="project-card" style="animation-delay: ${0.15 + i * 0.1}s">
+        <div class="project-title">${escapeHtml(project.title)}</div>
+        <p class="project-desc">${escapeHtml(project.description)}</p>
+        <div class="project-tech">
+          ${project.tech.map(t => `<span class="tech-tag">${escapeHtml(t)}</span>`).join('')}
+        </div>
+        ${renderVideoSection(project)}
+        <div class="project-btns">
+          <a class="btn btn-dark" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">🚀 Live</a>
+          <a class="btn btn-outline" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  async function loadPortfolio() {
+    try {
+      const [experiences, projects] = await Promise.all([
+        fetch('data/experience.json').then(r => r.json()),
+        fetch('data/projects.json').then(r => r.json())
+      ]);
+      renderExperience(experiences);
+      renderProjects(projects);
+    } catch (err) {
+      console.error('Failed to load portfolio data:', err);
+      document.getElementById('experience-list').innerHTML =
+        '<p style="color:#888;font-size:0.8rem;">Could not load experience data. Serve this site over HTTP (e.g. <code>python -m http.server</code>).</p>';
+      document.getElementById('projects-grid').innerHTML =
+        '<p style="color:#888;font-size:0.8rem;">Could not load projects data.</p>';
+    }
+  }
+
+  loadPortfolio();
 </script>
 </body>
 </html>
