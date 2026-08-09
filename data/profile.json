@@ -1,0 +1,45 @@
+{
+  "pageTitle": "Yogesh Yadav | AI/ML & Backend Engineer",
+  "tag": "Available for work",
+  "name": {
+    "first": "Yogesh",
+    "last": "Yadav"
+  },
+  "about": "AI/ML and Backend Engineer with 2+ years of experience building LLM-powered backend systems, semantic data pipelines, and AI-driven platforms. Passionate about building AI-native products that enable natural language interaction with complex data.",
+  "contact": [
+    {
+      "label": "yogesh.y1609@gmail.com",
+      "url": "mailto:yogesh.y1609@gmail.com"
+    },
+    {
+      "label": "+91-8769127331",
+      "url": "tel:+918769127331"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/yogii006"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/yogii006"
+    }
+  ],
+  "education": {
+    "institution": "IIIT Una",
+    "degree": "B.Tech in Computer Science & Engineering",
+    "duration": "2021 – 2025",
+    "cgpa": "7.71"
+  },
+  "sections": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills"
+  },
+  "labels": {
+    "noDemoVideo": "No demo video",
+    "live": "🚀 Live",
+    "github": "💻 GitHub"
+  },
+  "footer": "© 2025 Yogesh Yadav · AI/ML & Backend Engineer · IIIT Una CSE '25"
+}

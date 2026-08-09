@@ -8,6 +8,7 @@ Static portfolio site for Yogesh Yadav — projects, demos, and experience.
 portfolio/
 ├── index.html          # Main page (loads data via JavaScript)
 ├── data/
+│   ├── profile.json    # Name, about, contact, education, labels
 │   ├── experience.json # Work history
 │   ├── projects.json   # Projects with links and demo videos
 │   └── skills.json     # Skills by category
@@ -28,6 +29,7 @@ Open [http://localhost:8080](http://localhost:8080).
 
 Edit the JSON files in `data/` — no build step required:
 
+- **Profile:** `data/profile.json`
 - **Experience:** `data/experience.json`
 - **Projects:** `data/projects.json`
 - **Skills:** `data/skills.json`

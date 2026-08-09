@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Yogesh Yadav | AI/ML & Backend Engineer</title>
+<title>Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -29,7 +29,6 @@
     overflow-x: hidden;
   }
 
-  /* Noise texture overlay */
   body::before {
     content: '';
     position: fixed;
@@ -46,7 +45,6 @@
     padding: 0 2rem;
   }
 
-  /* ——— HEADER ——— */
   header {
     padding: 3rem 0 2rem;
     border-bottom: 1px solid var(--border);
@@ -68,9 +66,7 @@
     .header-grid { grid-template-columns: 1fr; }
   }
 
-  .header-left {
-    animation: fadeSlideUp 0.6s ease both;
-  }
+  .header-left { animation: fadeSlideUp 0.6s ease both; }
 
   .header-right {
     display: flex;
@@ -104,7 +100,6 @@
     border-radius: 20px;
     display: inline-block;
     margin-bottom: 1rem;
-    animation: fadeSlideUp 0.6s ease both;
   }
 
   h1 {
@@ -112,7 +107,6 @@
     font-weight: 800;
     line-height: 0.95;
     letter-spacing: -0.03em;
-    animation: fadeSlideUp 0.6s 0.1s ease both;
   }
 
   h1 span { color: var(--accent); }
@@ -124,7 +118,6 @@
     color: var(--muted);
     max-width: 720px;
     line-height: 1.7;
-    animation: fadeSlideUp 0.6s 0.2s ease both;
   }
 
   .contact-links {
@@ -132,7 +125,6 @@
     flex-wrap: wrap;
     gap: 0.75rem 1.25rem;
     margin-top: 1.25rem;
-    animation: fadeSlideUp 0.6s 0.25s ease both;
   }
 
   .contact-links a {
@@ -175,13 +167,8 @@
     gap: 6px;
   }
 
-  .skill-group {
-    margin-bottom: 0.85rem;
-  }
-
-  .skill-group:last-child {
-    margin-bottom: 0;
-  }
+  .skill-group { margin-bottom: 0.85rem; }
+  .skill-group:last-child { margin-bottom: 0; }
 
   .skill-category {
     font-family: 'DM Mono', monospace;
@@ -202,7 +189,6 @@
     border: 1px solid var(--border);
   }
 
-  /* ——— LAYOUT ——— */
   .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -214,7 +200,6 @@
     .layout { grid-template-columns: 1fr; }
   }
 
-  /* ——— SECTION TITLES ——— */
   .section-title {
     font-size: 0.65rem;
     letter-spacing: 0.25em;
@@ -235,7 +220,6 @@
     background: var(--accent);
   }
 
-  /* ——— EXPERIENCE ——— */
   .exp-card {
     position: relative;
     padding: 1.4rem 1.4rem 1.4rem 1.8rem;
@@ -256,7 +240,6 @@
     width: 3px;
     background: var(--accent);
     border-radius: 3px 0 0 3px;
-    transition: background 0.25s;
   }
 
   .exp-card:hover {
@@ -291,10 +274,7 @@
     margin-bottom: 10px;
   }
 
-  .exp-points {
-    list-style: none;
-    padding: 0;
-  }
+  .exp-points { list-style: none; padding: 0; }
 
   .exp-points li {
     font-size: 0.8rem;
@@ -313,7 +293,6 @@
     font-size: 0.75rem;
   }
 
-  /* ——— PROJECTS ——— */
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -412,9 +391,7 @@
     transition: transform 0.2s;
   }
 
-  .video-wrap:hover .video-play svg {
-    transform: scale(1.15);
-  }
+  .video-wrap:hover .video-play svg { transform: scale(1.15); }
 
   .video-wrap iframe {
     position: absolute;
@@ -424,10 +401,22 @@
     border: none;
   }
 
-  .project-btns {
+  .video-placeholder {
+    background: #1a1a1a;
     display: flex;
-    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
   }
+
+  .video-placeholder-text {
+    text-align: center;
+    color: #555;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+  }
+
+  .project-btns { display: flex; gap: 6px; }
 
   .btn {
     flex: 1;
@@ -456,136 +445,58 @@
 
   .btn-outline:hover { border-color: var(--text); color: var(--text); }
 
-  /* ——— MODAL ——— */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.92);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(6px);
-    animation: fadeIn 0.2s ease;
+  .site-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    padding: 2rem 0;
+    text-align: center;
   }
 
-  .modal-overlay.active {
-    display: flex;
+  .site-footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
   }
 
-  .modal-box {
-    position: relative;
-    width: min(860px, 92vw);
-    aspect-ratio: 16/9;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.8);
-    animation: scaleIn 0.25s ease;
+  .load-error {
+    color: #888;
+    font-size: 0.8rem;
+    font-family: 'DM Mono', monospace;
   }
 
-  .modal-box iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
-    line-height: 1;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    font-family: 'Syne', sans-serif;
-  }
-
-  .modal-close:hover { opacity: 1; }
-
-  @keyframes fadeIn {
-    from { opacity: 0; } to { opacity: 1; }
-  }
-
-  @keyframes scaleIn {
-    from { transform: scale(0.92); opacity: 0; }
-    to   { transform: scale(1);    opacity: 1; }
-  }
   @keyframes fadeSlideUp {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-  .exp-card:nth-child(1) { animation-delay: 0.1s; }
-  .exp-card:nth-child(2) { animation-delay: 0.2s; }
-  .exp-card:nth-child(3) { animation-delay: 0.3s; }
-
-  .project-card:nth-child(1) { animation-delay: 0.15s; }
-  .project-card:nth-child(2) { animation-delay: 0.25s; }
-  .project-card:nth-child(3) { animation-delay: 0.35s; }
-  .project-card:nth-child(4) { animation-delay: 0.45s; }
 </style>
 </head>
 <body>
 <div class="wrapper">
 
-  <!-- HEADER -->
   <header>
     <div class="header-grid">
-      <div class="header-left">
-        <div class="header-tag">Available for work</div>
-        <h1>Yogesh<br/><span>Yadav</span></h1>
-        <p class="subtitle">AI/ML and Backend Engineer with 2+ years of experience building LLM-powered backend systems, semantic data pipelines, and AI-driven platforms. Passionate about building AI-native products that enable natural language interaction with complex data.</p>
-        <div class="contact-links">
-          <a href="mailto:yogesh.y1609@gmail.com">yogesh.y1609@gmail.com</a>
-          <a href="tel:+918769127331">+91-8769127331</a>
-          <a href="https://linkedin.com/in/yogii006" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/yogii006" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </div>
-
-      <div class="header-right">
-        <div class="info-block">
-          <h3>Education</h3>
-          <p><span class="highlight">IIIT Una</span> — B.Tech in Computer Science & Engineering<br/>2021 – 2025 · CGPA: 7.71</p>
-        </div>
-        <div class="info-block">
-          <h3>Skills</h3>
-          <div id="skills-list"></div>
-        </div>
-      </div>
+      <div class="header-left" id="header-left"></div>
+      <div class="header-right" id="header-right"></div>
     </div>
   </header>
 
-  <!-- MAIN LAYOUT -->
   <div class="layout">
-
-    <!-- LEFT: EXPERIENCE -->
     <div>
-      <p class="section-title">Experience</p>
+      <p class="section-title" id="experience-title"></p>
       <div id="experience-list"></div>
     </div>
-
-    <!-- RIGHT: PROJECTS -->
     <div>
-      <p class="section-title">Projects</p>
+      <p class="section-title" id="projects-title"></p>
       <div id="projects-grid" class="projects-grid"></div>
     </div>
-
   </div>
 
-  <footer style="border-top: 1px solid var(--border); margin-top: 4rem; padding: 2rem 0; text-align: center;">
-    <p style="font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);">
-      © 2025 Yogesh Yadav · AI/ML & Backend Engineer · IIIT Una CSE '25
-    </p>
-  </footer>
+  <footer class="site-footer" id="site-footer"></footer>
 
 </div>
 <script>
   const PLAY_ICON = '<svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><rect width="68" height="48" rx="10" fill="rgba(0,0,0,0.72)"/><polygon points="26,14 26,34 46,24" fill="#fff"/></svg>';
+  let uiLabels = {};
 
   function escapeHtml(str) {
     return String(str)
@@ -607,9 +518,44 @@
     el.onclick = null;
   }
 
+  function renderProfile(profile) {
+    document.title = profile.pageTitle;
+    uiLabels = profile.labels;
+
+    document.getElementById('header-left').innerHTML = `
+      <div class="header-tag">${escapeHtml(profile.tag)}</div>
+      <h1>${escapeHtml(profile.name.first)}<br/><span>${escapeHtml(profile.name.last)}</span></h1>
+      <p class="subtitle">${escapeHtml(profile.about)}</p>
+      <div class="contact-links">
+        ${profile.contact.map(link => {
+          const external = link.url.startsWith('http');
+          return `<a href="${escapeHtml(link.url)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escapeHtml(link.label)}</a>`;
+        }).join('')}
+      </div>
+    `;
+
+    const edu = profile.education;
+    document.getElementById('header-right').innerHTML = `
+      <div class="info-block">
+        <h3>${escapeHtml(profile.sections.education)}</h3>
+        <p>
+          <span class="highlight">${escapeHtml(edu.institution)}</span> — ${escapeHtml(edu.degree)}<br/>
+          ${escapeHtml(edu.duration)} · CGPA: ${escapeHtml(edu.cgpa)}
+        </p>
+      </div>
+      <div class="info-block">
+        <h3>${escapeHtml(profile.sections.skills)}</h3>
+        <div id="skills-list"></div>
+      </div>
+    `;
+
+    document.getElementById('experience-title').textContent = profile.sections.experience;
+    document.getElementById('projects-title').textContent = profile.sections.projects;
+    document.getElementById('site-footer').innerHTML = `<p>${escapeHtml(profile.footer)}</p>`;
+  }
+
   function renderExperience(experiences) {
-    const container = document.getElementById('experience-list');
-    container.innerHTML = experiences.map((exp, i) => `
+    document.getElementById('experience-list').innerHTML = experiences.map((exp, i) => `
       <div class="exp-card" style="animation-delay: ${0.1 + i * 0.1}s">
         <div class="exp-role">${escapeHtml(exp.role)}</div>
         <div class="exp-company">${escapeHtml(exp.company)}</div>
@@ -624,8 +570,8 @@
   function renderVideoSection(project) {
     const videoId = extractYouTubeId(project.demoVideo);
     if (!videoId) {
-      return `<div class="video-wrap" style="background:#1a1a1a; display:flex; align-items:center; justify-content:center; cursor:default;">
-        <div style="text-align:center; color:#555; font-family:'DM Mono',monospace; font-size:0.7rem;">No demo video</div>
+      return `<div class="video-wrap video-placeholder">
+        <div class="video-placeholder-text">${escapeHtml(uiLabels.noDemoVideo)}</div>
       </div>`;
     }
     return `<div class="video-wrap" onclick="playVideo(this, '${videoId}')">
@@ -635,8 +581,7 @@
   }
 
   function renderProjects(projects) {
-    const container = document.getElementById('projects-grid');
-    container.innerHTML = projects.map((project, i) => `
+    document.getElementById('projects-grid').innerHTML = projects.map((project, i) => `
       <div class="project-card" style="animation-delay: ${0.15 + i * 0.1}s">
         <div class="project-title">${escapeHtml(project.title)}</div>
         <p class="project-desc">${escapeHtml(project.description)}</p>
@@ -645,16 +590,15 @@
         </div>
         ${renderVideoSection(project)}
         <div class="project-btns">
-          ${project.liveUrl ? `<a class="btn btn-dark" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">🚀 Live</a>` : ''}
-          <a class="btn ${project.liveUrl ? 'btn-outline' : 'btn-dark'}" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          ${project.liveUrl ? `<a class="btn btn-dark" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(uiLabels.live)}</a>` : ''}
+          <a class="btn ${project.liveUrl ? 'btn-outline' : 'btn-dark'}" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(uiLabels.github)}</a>
         </div>
       </div>
     `).join('');
   }
 
   function renderSkills(skillGroups) {
-    const container = document.getElementById('skills-list');
-    container.innerHTML = skillGroups.map(group => `
+    document.getElementById('skills-list').innerHTML = skillGroups.map(group => `
       <div class="skill-group">
         <p class="skill-category">${escapeHtml(group.category)}</p>
         <div class="skills-grid">
@@ -666,22 +610,19 @@
 
   async function loadPortfolio() {
     try {
-      const [experiences, projects, skills] = await Promise.all([
+      const [profile, experiences, projects, skills] = await Promise.all([
+        fetch('data/profile.json').then(r => r.json()),
         fetch('data/experience.json').then(r => r.json()),
         fetch('data/projects.json').then(r => r.json()),
         fetch('data/skills.json').then(r => r.json())
       ]);
+      renderProfile(profile);
       renderExperience(experiences);
       renderProjects(projects);
       renderSkills(skills);
     } catch (err) {
       console.error('Failed to load portfolio data:', err);
-      document.getElementById('experience-list').innerHTML =
-        '<p style="color:#888;font-size:0.8rem;">Could not load experience data. Serve this site over HTTP (e.g. <code>python -m http.server</code>).</p>';
-      document.getElementById('projects-grid').innerHTML =
-        '<p style="color:#888;font-size:0.8rem;">Could not load projects data.</p>';
-      document.getElementById('skills-list').innerHTML =
-        '<p style="color:#888;font-size:0.8rem;">Could not load skills data.</p>';
+      document.body.innerHTML = '<p class="load-error" style="padding:2rem;">Could not load portfolio. Serve this site over HTTP (e.g. python -m http.server).</p>';
     }
   }
 
