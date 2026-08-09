@@ -4,7 +4,7 @@
     "title": "DevMate – AI Productivity Platform",
     "description": "AI-powered productivity platform that enables natural voice-to-voice interaction with multiple tools. DevMate provides agentic workflows for web search, YouTube summarization, stock prices, currency conversion, and document-based(multi format files like .png, .pdf, .pptx etc) Q&A, with support for downloadable AI-generated outputs.",
     "tech": ["FastAPI", "React", "LangGraph","STT","TTS", "OpenAI", "Supabase", "JWT"],
-    "liveUrl": "https://devmate-frontend-zf3s.onrender.com//",
+    "liveUrl": "https://devmate-frontend-zf3s.onrender.com/",
     "githubUrl": "https://github.com/yogii006/devmate",
     "demoVideo": "https://www.youtube.com/embed/-XHQFR3IEG8"
   },

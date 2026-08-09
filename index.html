@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Yogesh Yadav | Portfolio</title>
+<title>Yogesh Yadav | AI/ML & Backend Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -98,9 +98,76 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.85rem;
     color: var(--muted);
-    max-width: 580px;
+    max-width: 720px;
     line-height: 1.7;
     animation: fadeSlideUp 0.6s 0.2s ease both;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 1.25rem;
+    animation: fadeSlideUp 0.6s 0.25s ease both;
+  }
+
+  .contact-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-links a:hover { color: var(--accent); }
+
+  .info-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    animation: fadeSlideUp 0.6s 0.3s ease both;
+  }
+
+  @media (max-width: 700px) {
+    .info-bar { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 0.75rem;
+  }
+
+  .info-block p {
+    font-size: 0.82rem;
+    color: #aaa;
+    line-height: 1.6;
+  }
+
+  .info-block .highlight { color: var(--accent); font-weight: 600; }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--surface2);
+    color: var(--muted);
+    border: 1px solid var(--border);
   }
 
   /* ——— LAYOUT ——— */
@@ -437,8 +504,40 @@
   <header>
     <div class="header-tag">Available for work</div>
     <h1>Yogesh<br/><span>Yadav</span></h1>
-    <p class="subtitle">Generative AI / Backend Engineer — building AI-native backend systems, LLM-powered platforms, and semantic data pipelines.</p>
+    <p class="subtitle">AI/ML and Backend Engineer with 2+ years of experience building LLM-powered backend systems, semantic data pipelines, and AI-driven platforms. Passionate about building AI-native products that enable natural language interaction with complex data.</p>
+    <div class="contact-links">
+      <a href="mailto:yogesh.y1609@gmail.com">yogesh.y1609@gmail.com</a>
+      <a href="tel:+918769127331">+91-8769127331</a>
+      <a href="https://linkedin.com/in/yogii006" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/yogii006" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
   </header>
+
+  <div class="info-bar">
+    <div class="info-block">
+      <h3>Education</h3>
+      <p><span class="highlight">IIIT Una</span> — B.Tech in Computer Science & Engineering<br/>2021 – 2025 · CGPA: 7.71</p>
+    </div>
+    <div class="info-block">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <span class="skill-tag">Generative AI</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">MCP</span>
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">MongoDB</span>
+        <span class="skill-tag">Redis</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">FAISS</span>
+        <span class="skill-tag">Supabase</span>
+        <span class="skill-tag">Docker</span>
+      </div>
+    </div>
+  </div>
 
   <!-- MAIN LAYOUT -->
   <div class="layout">
@@ -459,7 +558,7 @@
 
   <footer style="border-top: 1px solid var(--border); margin-top: 4rem; padding: 2rem 0; text-align: center;">
     <p style="font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);">
-      © 2025 Yogesh Yadav · Generative AI / Backend Engineer
+      © 2025 Yogesh Yadav · AI/ML & Backend Engineer · IIIT Una CSE '25
     </p>
   </footer>
 
@@ -525,8 +624,8 @@
         </div>
         ${renderVideoSection(project)}
         <div class="project-btns">
-          <a class="btn btn-dark" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">🚀 Live</a>
-          <a class="btn btn-outline" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+          ${project.liveUrl ? `<a class="btn btn-dark" href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer">🚀 Live</a>` : ''}
+          <a class="btn ${project.liveUrl ? 'btn-outline' : 'btn-dark'}" href="${escapeHtml(project.githubUrl)}" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
         </div>
       </div>
     `).join('');
